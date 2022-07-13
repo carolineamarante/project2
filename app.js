@@ -7,7 +7,7 @@ const server = http.createServer((req, res) => {
     if (url === '/') {
         res.write('<html>');
         res.write('<head><title>Enter Message</title><head>');
-        res.write('<body><form action="/message" method="POST"><input type="text"name="Isaac"><button type="submit">Confirm</button></form></body>');
+        res.write('<body><form action="/message" method="POST"><input type="text"name="message"><button type="submit">Confirm</button></form></body>');
         res.write('</html>');
         return res.end();
     } 
@@ -17,15 +17,17 @@ const server = http.createServer((req, res) => {
             console.log(chunk);
             body.push(chunk);
         });
-        req.on('close', () => {
+        return req.on('end', () => {
             const parsedBody = Buffer.concat(body).toString();
             const message = parsedBody.split('=')[1];
-            fs.writeFileSync('message.txt', message);  
+            fs.writeFile('message.txt', message, err => {
+                res.statusCode = 302;
+                res.setHeader('Location', '/');
+                return res.end();
+            });
+       
         });
-  
-        res.statusCode = 302;
-        res.setHeader('Location', '/');
-        return res.end();
+        
     }
     res.setHeader('Content-Type', 'text/html');
     res.write('<html>');
@@ -33,7 +35,7 @@ const server = http.createServer((req, res) => {
     res.write('<body><h1>FALA MEMO ISAQUINHO TE AMO</hq></body>');
     res.write('</html>');
     res.end();
-});
+}); 
 
 
 server.listen(3000);
