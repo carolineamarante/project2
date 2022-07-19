@@ -1,5 +1,4 @@
 const fs = require('fs');
-const { request } = require('http');
 
 const requestHandler = (req, res) => {
     const url = req.url;

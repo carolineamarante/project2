@@ -1,0 +1,23 @@
+{
+  "name": "project2",
+  "version": "1.0.0",
+  "description": "Projeto da Carolzinha",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carolineamarante/project2.git"
+  },
+  "author": "carolzinha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carolineamarante/project2/issues"
+  },
+  "homepage": "https://github.com/carolineamarante/project2#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.19" 
+  }
+}
