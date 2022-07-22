@@ -1,3 +1,4 @@
+const path = require('path');
 const express = require('express');
 const routes = express.Router();
 
@@ -11,7 +12,8 @@ USE - a ordem das rotas importa
 GET - tanto faz a ordem, ele vai funcionar certinho
 */
 routes.get('/', (req, res, next) => {
-    res.send('Pagina Principal que cuida do /')
+    res.send('Pagina Principal que cuida do /');
+    res.sendFile(path.join(__dirname, '../','views', 'shop.html'))
 });
 
 module.exports = routes;

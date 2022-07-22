@@ -14,8 +14,10 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(adminRoutes);
 app.use(shopRoutes);
 
-// o caminho vazio / precisa sempre ficar por ultimo na lista, caso contrário as outras paginas
-// nunca serão executadas, isso por iniciarem com a /
+//use - lida com qualquer metodo http 
 
+app.use((req, res, next) => {
+   res.status(404).send('<h2>Page not found</h2>') 
+});
 
 app.listen(3000);
