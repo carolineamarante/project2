@@ -1,6 +1,7 @@
 //calling functions
 const express = require('express');
 const bodyParser = require('body-parser');
+
 const app = express();
 
 //routes
@@ -11,7 +12,7 @@ const shopRoutes = require('./routes/shop');
 app.use(bodyParser.urlencoded({extended: true}));
 
 //calling pages
-app.use(adminRoutes);
+app.use('/admin', adminRoutes);
 app.use(shopRoutes);
 
 //use - lida com qualquer metodo http 

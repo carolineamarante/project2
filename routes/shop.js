@@ -12,7 +12,6 @@ USE - a ordem das rotas importa
 GET - tanto faz a ordem, ele vai funcionar certinho
 */
 routes.get('/', (req, res, next) => {
-    res.send('Pagina Principal que cuida do /');
     res.sendFile(path.join(__dirname, '../','views', 'shop.html'))
 });
 
