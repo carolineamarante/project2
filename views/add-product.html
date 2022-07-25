@@ -11,14 +11,14 @@
         body {
             padding: 0;
             margin: 0;
-            font-family: 'lucida sans';
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
 
         .main-header {
             width: 100%;
             height: 56px;
             background-color: rgb(122, 87, 146);
-            padding: 0 1.5rem;
+            padding: 2 1.5rem;
 
         }
 
@@ -52,25 +52,36 @@
             color: rgb(190, 164, 47);
         }
 
+        .form-control {
+            margin: 1rem 0;
+        }
+
         .form-control label,
         .form-control input {
             display: block;
         }
 
         .form-control input {
-            border: 1px solid ;
+            border: 2px solid rgb(122, 87, 146);
             font: inherit;
-            border-radius: 2px;
+            border-radius: 3px;
         }
 
         button {
             font: inherit;
-            border: 1px solid black;
-            background: white;
+            color: rgb(113, 36, 165);
+            border: 1px solid rgb(122, 87, 146);
+            background: rgb(255, 255, 255);
             border-radius: 3px;
-
+            cursor: pointer;
+            
         }
 
+        button:hover,
+        button:active {
+            background-color: rgb(122, 87, 146);
+            color: rgb(190, 164, 47);
+        }
 
 
 
