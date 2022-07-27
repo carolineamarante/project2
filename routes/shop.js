@@ -1,7 +1,9 @@
 const path = require('path');
-const rootDir = require('../utility/path');
 const express = require('express');
 const routes = express.Router();
+
+const rootDir = require('../utility/path');
+const adminData = require('./admin');
 
 
 /*
@@ -13,6 +15,7 @@ USE - a ordem das rotas importa
 GET - tanto faz a ordem, ele vai funcionar certinho
 */
 routes.get('/', (req, res, next) => {
+    console.log(adminData.products);
     res.sendFile(path.join(rootDir,'views', 'shop.html'));
 });
 
