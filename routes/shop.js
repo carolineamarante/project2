@@ -15,8 +15,7 @@ USE - a ordem das rotas importa
 GET - tanto faz a ordem, ele vai funcionar certinho
 */
 routes.get('/', (req, res, next) => {
-    console.log(adminData.products);
-    res.sendFile(path.join(rootDir,'views', 'shop.html'));
+    res.render('shop')
 });
 
 module.exports = routes;
