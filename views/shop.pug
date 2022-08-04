@@ -5,7 +5,7 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Lojita
+        title #{docTitle}
         link(rel="stylesheet", href="/css/main.css")
         link(rel="stylesheet", href="/css/product.css")
     body  
@@ -16,3 +16,16 @@ html(lang="en")
                         a.active(href="'/") Lojita 
                     li.main-header__item
                         a(href="/admin/add-product") Add Product 
+        main   
+            .grid
+                each product in prods
+                    article.card.product-item
+                        header.card__header
+                            h1.product__title #{product.title}
+                        div.card__image
+                            img(src="https://images-na.ssl-images-amazon.com/images/I/61JerIqX15L.jpg", alt="Ô livro") 
+                        div.card__content
+                            h2.product__price $19.99
+                            p.product__description Esse livro é sobre um livro que não sabia que era livro, ele leu um livro e viu que era um livro.
+                        .card__actions
+                            button.btn Add to Cart

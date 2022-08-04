@@ -48,4 +48,61 @@ body {
     color: rgb(190, 164, 47);
 }
 
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+  }
+  
+  .card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    margin-top: 1.5rem;
+  }
+  
+  .card__header,
+  .card__content {
+    padding: 1rem;
+  }
+  
+  .card__header h1,
+  .card__content h1,
+  .card__content h2,
+  .card__content p {
+    margin: 0;
+  }
+  
+  .card__image {
+    width: 100%;
+  }
+  
+  .card__image img {
+    width: 100%;
+  }
+  
+  .card__actions {
+      padding: 1rem;
+      text-align: center;
+  }
+  
+  .card__actions button,
+  .card__actions a {
+      margin: 0 0.25rem;
+  }
 
+  button {
+    font: inherit;
+    color: rgb(113, 36, 165);
+    border: 1px solid rgb(122, 87, 146);
+    background: rgb(255, 255, 255);
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+   
+}
+
+button:hover,
+button:active {
+    background-color: rgb(122, 87, 146);
+    color: rgb(190, 164, 47);
+}

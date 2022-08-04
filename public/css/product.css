@@ -1,4 +1,30 @@
-body {
+.product-form {
+    width: 20rem;
+    max-width: 90%;
+    margin: auto;
+}
+
+.product-item {
+    width: 20rem;
+    max-width: 95%;
+}
+
+.product__title {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.product__price {
+    text-align: center;
+    color: #4d4d4d;
+    margin-bottom: 0.5rem;
+}
+
+.product__description {
+    text-align: center;
+}
+
+/* body {
     padding: 0;
     margin: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -51,24 +77,6 @@ body {
 
 }
 
-.form-control {
-    margin: 1rem 0;
-    font-weight: bold;
-    
-}
-
-.form-control label,
-.form-control input {
-    display: block;
-    width: 100%;
-}
-
-.form-control input {
-    border: 2px solid rgb(122, 87, 146);
-    font: inherit;
-    border-radius: 3px;
-  
-}
 
 button {
     font: inherit;
@@ -88,3 +96,4 @@ button:active {
 }
 
 
+*/
