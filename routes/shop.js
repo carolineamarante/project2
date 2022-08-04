@@ -16,7 +16,7 @@ GET - tanto faz a ordem, ele vai funcionar certinho
 */
 routes.get('/', (req, res, next) => {
     const products = adminData.products;
-    res.render('shop', {prods: products, docTitle: 'Lojita'});
+    res.render('shop', {prods: products, pageTitle: 'Lojita', path: '/'});
 });
 
 module.exports = routes;

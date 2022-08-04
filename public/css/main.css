@@ -98,6 +98,7 @@ body {
     border-radius: 3px;
     cursor: pointer;
     font-weight: bold;
+    margin-top: 0.5rem;
    
 }
 
@@ -105,4 +106,5 @@ button:hover,
 button:active {
     background-color: rgb(122, 87, 146);
     color: rgb(190, 164, 47);
+    
 }

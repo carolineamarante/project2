@@ -1,11 +1,15 @@
 //calling functions
 const path = require('path');
+
 const express = require('express');
+const expressHbs = require('express-handlebars');
 const bodyParser = require('body-parser');
+
 
 const app = express();
 
-app.set('view engine', 'pug');
+app.engine('hbs', expressHbs());
+app.set('view engine', 'hbs');
 app.set('views', 'views');
 
 //routes
@@ -23,7 +27,7 @@ app.use(shopRoutes);
 //use - lida com qualquer metodo http 
 
 app.use((req, res, next) => {
-   res.render('404', {errorTitle: '404 - Page Not Found'})
+   res.status(404).render('404', {pageTitle: '404 - Page Not Found'})
 });
 
 app.listen(3000);
