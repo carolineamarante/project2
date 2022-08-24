@@ -1,7 +1,7 @@
-//calling functions
-const path = require('path');
 
+const path = require('path');
 const express = require('express');
+const send404 = require('./controllers/404');
 const bodyParser = require('body-parser');
 
 
@@ -11,7 +11,7 @@ app.set('view engine', 'pug');
 app.set('views', 'views');
 
 //routes
-const adminData = require('./routes/admin');
+const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 
 
@@ -19,13 +19,11 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname,  'public')));
 
 //calling pages
-app.use('/admin', adminData.routes);
+app.use('/admin', adminRoutes);
 app.use(shopRoutes);
 
 //use - lida com qualquer metodo http 
 
-app.use((req, res, next) => {
-   res.status(404).render('404', {pageTitle: '404 - Page Not Found'})
-});
+app.use(send404.get404);
 
 app.listen(3000);
