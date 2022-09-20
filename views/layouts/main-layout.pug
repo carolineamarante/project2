@@ -13,6 +13,13 @@ html(lang="en")
                 ul.main-header__item-list
                     li.main-header__item
                         a(href="/", class=(path === '/' ? 'active' : '')) Lojita
-                    <li class="main-header__item">
+                    li.main-header__item
+                        a(href="/products", class=(path === '/products' ? 'active' : '')) Produtitos
+                    li.main-header__item
+                        a(href="/cart", class=(path === '/cart' ? 'active' : '')) Carrito
+                    li.main-header__item
                         a(href="/admin/add-product", class=(path === '/admin/add-product' ? 'active' : '')) Add Produtito 
+                    li.main-header__item
+                        a(href="/admin/admin-product", class=(path === '/admin/admin-product' ? 'active' : '')) Admin Produtito
+                    
         block content

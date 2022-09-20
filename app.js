@@ -12,7 +12,7 @@ app.set('views', 'views');
 
 //routes
 const adminRoutes = require('./routes/admin');
-const shopRoutes = require('./routes/shop');
+const shopRoutes = require('./routes/product-list');
 
 
 app.use(bodyParser.urlencoded({extended: true}));
